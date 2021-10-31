@@ -14,7 +14,7 @@ public class Main {
 
         char[][] ground1 = new char[10][10];
 
-      //  GroundBuild(ground1);
+        GroundBuild(ground1);
 
         System.out.println("\n\nInvite second player, and let him build his ground (press *Enter* when ready)");
 
