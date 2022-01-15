@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="planes" type="planesType"/>
+  <xs:complexType name="charsType">
+    <xs:sequence>
+      <xs:element name="type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="
+                Passenger
+            "/>
+            <xs:enumeration value="
+                Farmer
+            "/>
+            <xs:enumeration value="
+                FireFighter
+            "/>
+            <xs:enumeration value="
+                Military
+            "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="workSeat" minOccurs="0" maxOccurs="unbounded">
+        <xs:simpleType>
+          <xs:restriction base="xs:int">
+            <xs:enumeration value="
+                6
+            "/>
+            <xs:enumeration value="
+                2
+            "/>
+            <xs:enumeration value="
+                8
+            "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="carryWeight" minOccurs="400" maxOccurs="unbounded">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="
+                2000
+            "/>
+            <xs:enumeration value="
+                500
+            "/>
+            <xs:enumeration value="
+                5000
+            "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="passengerSeat" minOccurs="0" maxOccurs="unbounded">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="
+                200
+            "/>
+            <xs:enumeration value="
+                2
+            "/>
+            <xs:enumeration value="
+                0
+            "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="radar">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="
+                Yes
+            "/>
+            <xs:enumeration value="
+                No
+            "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="parametersType">
+    <xs:sequence>
+      <xs:element name="height">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="
+                8
+            "/>
+            <xs:enumeration value="
+                2.5
+            "/>
+            <xs:enumeration value="
+                7
+            "/>
+            <xs:enumeration value="
+                4
+            "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="width">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="
+                50
+            "/>
+            <xs:enumeration value="
+                6
+            "/>
+            <xs:enumeration value="
+                43
+            "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="long">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="
+                73
+            "/>
+            <xs:enumeration value="
+                5
+            "/>
+            <xs:enumeration value="
+                53
+            "/>
+            <xs:enumeration value="
+                8
+            "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="planeType">
+    <xs:sequence>
+      <xs:element name="model">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="
+            AN-228
+        "/>
+            <xs:enumeration value="
+            TU-14
+        "/>
+            <xs:enumeration value="
+            JA-015
+        "/>
+            <xs:enumeration value="
+            F-16
+        "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="origin">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="
+            Ukraine
+        "/>
+            <xs:enumeration value="
+            Canada
+        "/>
+            <xs:enumeration value="
+            Japan
+        "/>
+            <xs:enumeration value="
+            USA
+        "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="charsType" name="chars"/>
+      <xs:element type="parametersType" name="parameters"/>
+      <xs:element name="price">
+        <xs:simpleType>
+          <xs:restriction base="xs:double">
+            <xs:enumeration value="
+            73000
+        "/>
+            <xs:enumeration value="
+            18000
+        "/>
+            <xs:enumeration value="
+            59600
+        "/>
+            <xs:enumeration value="
+            89700
+        "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="planesType">
+    <xs:sequence>
+      <xs:element type="planeType" name="plane" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
