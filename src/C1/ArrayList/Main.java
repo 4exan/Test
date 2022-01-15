@@ -1,12 +1,10 @@
-package ArrayList;
+package C1.ArrayList;
 
 //Используя Intelij IDEA создать проект, пакет.
 //        Создать class Main, в нем создать список, добавить учителей, которых вы только сможете вспомнить со
 //        школы. И получить индекс самого лучшего учителя и самого не очень. Вывести список в консоль.
 
 import java.util.ArrayList;
-import java.util.ListIterator;
-import java.util.Scanner;
 
 public class Main {
 
@@ -33,7 +31,7 @@ public class Main {
 //        действие, после чего меню отображается снова.
 
 //        Scanner scn = new Scanner(System.in);
-//        ArrayList<Integer> arr2 = new ArrayList<>();
+//        C1.ArrayList<Integer> arr2 = new C1.ArrayList<>();
 //        int val;
 //        int oper;
 //
